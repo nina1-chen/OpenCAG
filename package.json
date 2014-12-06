@@ -1,0 +1,11 @@
+﻿{
+  "name": "OpenCAG",
+  "version": "0.0.1", 
+  "devDependencies": {  
+  },
+  "dependencies": {   
+    "express": "*",  
+	"socket.io": "*",
+	"jade": "*"
+  }
+}
