@@ -1,11 +1,28 @@
-﻿{
-  "name": "OpenCAG",
-  "version": "0.0.1", 
-  "devDependencies": {  
-  },
-  "dependencies": {   
-    "express": "*",  
-	"socket.io": "*",
-	"jade": "*"
-  }
+{
+	"name": "OpenCAG",
+	"version": "0.0.1", 
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:104TW/OpenCAG.git"
+	},
+	"browser": {
+		"jquery": "./bower_components/jquery/dist/jquery.js"
+	},
+	"browserify-shim": {
+		"jquery": "$"
+	},
+	"browserify": {
+		"transform": [
+			"browserify-shim"
+		]
+	},
+	"dependencies": {
+		"grunt": "*",
+		"grunt-browserify": "*",
+		"browserify-shim": "*",
+		"express": "*",
+		"socket.io": "*",
+		"debowerify": "*",
+		"jadeify": "*"
+	}
 }
