@@ -1,7 +1,6 @@
 /*core route is only for clear path routing 
   not impletement biz rule here */
-var sample = require('.././modules/sample')
-	,RootModule = require('.././modules/RootModule');
+var RootModule = require('.././web_modules/RootModule');
 
 exports.actions = function(app) {
 	//app.use(sample());

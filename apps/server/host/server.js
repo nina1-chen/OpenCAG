@@ -4,9 +4,9 @@ var express = require('express')
 	, http = require('http')
 	, server = http.createServer(app)
 	, router = require('./routers/CoreRouter')
-	, socket = require('socket.io')
-	, io = socket.listen(server)
-	, IoOnConnection = require('./modules/IoOnConnection');	
+	, socketio = require('./modules/SocketIO');
+	
+	require('./app.js');
 /* Declare block End*/
 
 //app set block	
@@ -18,9 +18,8 @@ var express = require('express')
 	router.actions(app);
 //Rule : all vendor code please use module request
 //       not implement biz rule here
-//socket.io
-	io.sockets.on('connection',IoOnConnection());
+//socket.io initial
+	socketio(server);	
 //all express set must with module 
-//ex: https://github.com/expressjs/serve-favicon/blob/master/index.js
 
 	server.listen(3000);
